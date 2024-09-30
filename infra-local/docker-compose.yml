@@ -71,15 +71,15 @@ services:
   #     - ./docker-data/localstack:/var/lib/localstack
   #     - ./docker-data/run/docker.sock:/var/run/docker.sock
 
-  # appsync:
-  #   build:
-  #     context: ./appsync-simulator
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - 4001:4001
-  #   environment:
-  #     - PORT=4001
-  #     - API_KEY=da2-fakeApiId123456
+  appsync:
+    build:
+      context: ./appsync-simulator
+      dockerfile: Dockerfile
+    ports:
+      - 4001:4001
+    environment:
+      - PORT=4001
+      - API_KEY=da2-fakeApiId123456
 
   # cognito-local:
   #   build:
