@@ -26,7 +26,7 @@
     "migrate:dev": "prisma migrate dev",
     "migrate:rds": "prisma migrate deploy",
     "migrate:ddb": "ts-node prisma/ddb.ts",
-    "migrate": "npm run migrate:rds && npm run migrate:ddb"
+    "migrate": "npm run migrate:ddb"
   },
   "dependencies": {
     "@mbc-cqrs-severless/core": "^0.0.61-alpha.0",

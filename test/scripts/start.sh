@@ -25,7 +25,7 @@ while true; do
 	fi
 
     # Get the last 5 lines from the log file
-    last_lines=$(tail -n 6 "$LOG_FILE")
+    last_lines=$(tail -n 2 "$LOG_FILE")
 
     echo "${last_lines}" >> start.out.txt 2>&1
 
@@ -37,7 +37,7 @@ while true; do
     fi
 
     # Print the result
-    echo "All last 6 lines end with 'Started|Running': $result" >> start.out.txt 2>&1
+    echo "All last 2 lines end with 'Started|Running': $result" >> start.out.txt 2>&1
 done
 
 sleep 15
