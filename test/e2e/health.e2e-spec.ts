@@ -1,13 +1,13 @@
 import request from 'supertest'
 
-// import { config } from './config'
+import { config } from './config'
 
 const API_PATH = '/'
 
 describe('Health', () => {
   describe(`[GET ${API_PATH}]`, () => {
     it('should be healthy', () => {
-      return request('http://0.0.0.0:3000')
+      return request('http://localhost:3000')
         .get('/')
         .expect(200)
         .then((response) => {
