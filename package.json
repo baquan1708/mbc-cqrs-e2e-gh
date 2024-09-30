@@ -22,7 +22,6 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "NODE_ENV=local jest --config ./test/jest-e2e.json --runInBand",
-    "posttest:e2e": "cd test/scripts && /bin/bash ./stop.sh",
     "migrate:dev": "prisma migrate dev",
     "migrate:rds": "prisma migrate deploy",
     "migrate:ddb": "ts-node prisma/ddb.ts",

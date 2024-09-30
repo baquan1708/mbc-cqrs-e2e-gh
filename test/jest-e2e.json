@@ -4,6 +4,7 @@
   "testEnvironment": "node",
   "testRegex": ".e2e-spec.ts$",
   "globalSetup": "<rootDir>/../scripts/start.ts",
+  "globalTeardown": "<rootDir>/../scripts/stop.ts",
   "transform": {
     "^.+\\.(t|j)s$": "ts-jest"
   }
