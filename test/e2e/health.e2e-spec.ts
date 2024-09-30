@@ -1,13 +1,18 @@
 import request from 'supertest'
 
-import { config } from './config'
+// import { config } from './config'
 
 const API_PATH = '/'
 
 describe('Health', () => {
   describe(`[GET ${API_PATH}]`, () => {
     it('should be healthy', () => {
-      return request('https://www.google.com/').get('/').expect(200)
+      return request('http://0.0.0.0:3000')
+        .get('/')
+        .expect(200)
+        .then((response) => {
+          expect(response.text).toEqual('Hello World!')
+        })
     })
   })
 })
